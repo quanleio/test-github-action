@@ -23,14 +23,14 @@ jobs:
         with:
           publish-dir: './dist'
           production-branch: master
-          github-token: ${{ secrets.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 }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: false
           enable-commit-comment: true
           overwrites-pull-request-comment: true
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.ybsvYKyVvhlwyaXLRrX1xGs82fUZsRVkLGAfgnz_K4g }}
-          NETLIFY_SITE_ID: ${{ secrets.93c41f1b-0238-4da2-a76f-3759ef1784eb }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
 
 
