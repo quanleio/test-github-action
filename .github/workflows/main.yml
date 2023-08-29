@@ -5,12 +5,19 @@ on:
   pull_request:
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
       # ( Build to ./dist or other directory... )
 
+      - name: Install Dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm install
+
+      - run: npm run build
+        if: ${{ always() }}
+          
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
@@ -25,3 +32,5 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.8fjfcPjbSl54Y4QhsrI1qD7ZbqF_7J4tR7kg-fhsXes }}
           NETLIFY_SITE_ID: ${{ secrets.93c41f1b-0238-4da2-a76f-3759ef1784eb }}
         timeout-minutes: 1
+
+        
