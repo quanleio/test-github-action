@@ -10,7 +10,7 @@ export default class PlaneToy {
   }
   setPlaneToy = () => {
     const geometry = new THREE.PlaneGeometry(1, 1, )
-    const material = new THREE.MeshBasicMaterial()
+    const material = new THREE.MeshBasicMaterial({ color: 'red'})
     const plane = new THREE.Mesh(geometry, material)
 
     this.scene.add(plane)
