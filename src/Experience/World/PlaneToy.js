@@ -13,6 +13,11 @@ export default class PlaneToy {
     const material = new THREE.MeshBasicMaterial({ color: 'yellow'})
     const plane = new THREE.Mesh(geometry, material)
 
+
+
+
+
+
     this.scene.add(plane)
   }
   update = () => {}
