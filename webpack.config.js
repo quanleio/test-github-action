@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   mode: "development",
-  name: "threejs-webpack-template",
+  name: "test-github-action",
   devtool: 'eval-source-map',
   entry: {
     app: ["./src/index.js"],
