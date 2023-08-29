@@ -13,7 +13,6 @@ export default class PlaneToy {
     const material = new THREE.MeshBasicMaterial()
     const plane = new THREE.Mesh(geometry, material)
 
-    plane.scale.setScalar(10)
     this.scene.add(plane)
   }
   update = () => {}

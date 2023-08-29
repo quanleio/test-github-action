@@ -1,5 +1,6 @@
 import Experience from "../Experience.js"
 import Fox from './Fox';
+import PlaneToy from './PlaneToy';
 export default class World {
   constructor() {
     this.experience = new Experience()
@@ -9,10 +10,10 @@ export default class World {
 
     // Wait for resources
     this.resources.on("ready", () => {
-      this.fox = new Fox()
+      this.plane = new PlaneToy()
     })
   }
   update() {
-    if (this.fox) this.fox.update()
+    if (this.plane) this.plane.update()
   }
 }
