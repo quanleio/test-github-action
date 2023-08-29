@@ -17,7 +17,7 @@ jobs:
 
       - run: npm run build
         if: ${{ always() }}
-          
+
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2.0
         with:
@@ -29,8 +29,8 @@ jobs:
           enable-commit-comment: true
           overwrites-pull-request-comment: true
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.93c41f1b-0238-4da2-a76f-3759ef1784eb }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.ybsvYKyVvhlwyaXLRrX1xGs82fUZsRVkLGAfgnz_K4g }}
           NETLIFY_SITE_ID: ${{ secrets.93c41f1b-0238-4da2-a76f-3759ef1784eb }}
         timeout-minutes: 1
 
-        
+
